@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/exit"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/size_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评价"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/app_gray"
+            android:layout_below="@id/iv_back"/>
+
+    </RelativeLayout>
+
+    <RatingBar
+        android:id="@+id/rb_commend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_20"/>
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rb_commend"
+        android:layout_marginTop="@dimen/size_20">
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="态度友好"
+            android:textSize="17sp"
+            android:paddingBottom="@dimen/size_5"
+            android:paddingTop="@dimen/size_5"
+            android:paddingRight="@dimen/size_20"
+            android:paddingLeft="@dimen/size_20"
+            android:background="@drawable/text_stroke"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/size_30"
+            android:layout_marginRight="@dimen/size_30"
+            android:gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_stroke"
+            android:paddingBottom="@dimen/size_5"
+            android:paddingLeft="@dimen/size_20"
+            android:paddingRight="@dimen/size_20"
+            android:layout_marginRight="@dimen/size_30"
+            android:layout_marginLeft="@dimen/size_30"
+            android:paddingTop="@dimen/size_5"
+            android:text="回复消息快"
+            android:textSize="17sp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_commend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="提交评价"
+        android:textColor="@color/white"
+        android:background="@color/app_qing"/>
+</RelativeLayout>

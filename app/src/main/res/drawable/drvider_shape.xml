@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <gradient
+        android:centerColor="@color/app_qing"
+        android:endColor="@color/app_qing"
+        android:startColor="@color/app_qing"
+        android:type="linear" />
+
+    <size android:height="1dp" />
+
+</shape>

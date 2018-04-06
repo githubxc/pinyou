@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_corners"
+    android:layout_marginLeft="@dimen/size_5"
+    android:layout_marginRight="@dimen/size_5"
+    android:layout_marginBottom="@dimen/size_5">
+
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/rv_commend"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+   </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

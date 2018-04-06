@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/carpool_mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.amap.api.maps.TextureMapView>
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_gray3"
+        android:padding="@dimen/size_5"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@color/app_white"
+            android:gravity="center"
+            android:text="城市" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/app_white"
+            android:gravity="center"
+            android:text="取 消" />
+
+        <View
+            android:id="@+id/v"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_toRightOf="@id/tv_location" />
+
+        <EditText
+            android:id="@+id/et_location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_cancel"
+            android:layout_toRightOf="@id/v"
+            android:background="@drawable/et"
+            android:gravity="center"
+            android:hint="选择地点"
+            android:textCursorDrawable="@null" />
+
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_search"
+        android:layout_above="@id/rl_view"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:visibility="gone">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/rl_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:layout_marginBottom="@dimen/size_10"
+        android:background="@drawable/shape_corners">
+
+        <RelativeLayout
+            android:id="@+id/rl_start_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/size_5"
+            android:paddingBottom="@dimen/size_5">
+
+        <ImageView
+            android:id="@+id/iv_start_point"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/start_point"
+            android:layout_marginLeft="@dimen/size_10"/>
+
+        <TextView
+            android:id="@+id/tv_start_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_start_point"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_10"
+            android:hint="从这里出发"
+            android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_end_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_below="@id/rl_start_point"
+            android:paddingBottom="@dimen/size_5">
+
+            <ImageView
+                android:id="@+id/iv_end_point"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/end_point"
+                android:layout_marginLeft="@dimen/size_10"/>
+
+            <TextView
+                android:id="@+id/tv_end_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_end_point"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:hint="到哪儿去"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_below="@id/rl_end_point"
+            android:paddingTop="@dimen/size_5"
+            android:paddingBottom="@dimen/size_5">
+
+            <ImageView
+                android:id="@+id/iv_start_time"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/start_time"
+                android:layout_marginLeft="@dimen/size_10"/>
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_start_time"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:hint="出发时间"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_people"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_start_time"
+            android:paddingTop="@dimen/size_5"
+            android:paddingBottom="@dimen/size_5">
+
+            <ImageView
+                android:id="@+id/iv_people"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/people"
+                android:layout_marginLeft="@dimen/size_10"/>
+
+            <TextView
+                android:id="@+id/tv_people"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_people"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:hint="人数"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_sure"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_people"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:background="@color/dark"
+                android:paddingTop="@dimen/size_10"
+                android:paddingBottom="@dimen/size_10"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:text="确认发布"
+                android:textColor="@color/app_white"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

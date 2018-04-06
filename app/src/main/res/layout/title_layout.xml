@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height">
+
+    <RelativeLayout
+        android:id="@+id/base_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/base_left_icon"
+            android:layout_width="50dp"
+            android:layout_height="42dp"
+            android:padding="@dimen/size_8"
+            android:src="@mipmap/back"
+            android:tint="@android:color/white"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/base_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/size_20" />
+
+
+        <ImageView
+            android:id="@+id/base_right_icon2"
+            android:layout_width="50dp"
+            android:layout_height="42dp"
+            android:layout_toLeftOf="@+id/base_right_icon1"
+            android:contentDescription="@string/second_function_key"
+            android:padding="@dimen/size_8"
+            android:src="@mipmap/add"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/base_right_icon1"
+            android:layout_width="50dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/first_function_key"
+            android:padding="@dimen/size_8"
+            android:src="@mipmap/more"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/base_right_text"
+            android:layout_width="50dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/make_sure"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/size_17"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

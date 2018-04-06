@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:stv="http://schemas.android.com/apk/res-auto">
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/st_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        stv:sLeftTextString="头像"
+        stv:sLeftViewMarginLeft="@dimen/size_20"
+        stv:sLeftViewGravity="left_center"
+        stv:sRightIconRes="@mipmap/avater"
+        stv:sRightIconHeight="40dp"
+        stv:sRightIconWidth="40dp"
+        stv:sRightIconShowCircle = "true"
+        stv:sRightIconMarginRight="@dimen/size_20"/>
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/st_name"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        stv:sLeftTextString="昵称"
+        stv:sLeftViewMarginLeft="@dimen/size_20"
+        stv:sLeftViewGravity="left_center"
+        stv:sRightTextString="昵称"
+        stv:sRightIconRes="@mipmap/forword"
+        stv:sRightIconHeight="40dp"
+        stv:sRightIconWidth="40dp"
+        stv:sRightIconMarginRight="@dimen/size_20"/>
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/st_sex"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        stv:sLeftTextString="性别"
+        stv:sLeftViewMarginLeft="@dimen/size_20"
+        stv:sLeftViewGravity="left_center"
+        stv:sRightIconRes="@mipmap/forword"
+        stv:sRightIconHeight="40dp"
+        stv:sRightIconWidth="40dp"
+        stv:sRightTextString="性别"
+        stv:sRightIconMarginRight="@dimen/size_20"/>
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/st_location"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        stv:sLeftTextString="所在地"
+        stv:sLeftViewMarginLeft="@dimen/size_20"
+        stv:sLeftViewGravity="left_center"
+        stv:sRightIconRes="@mipmap/forword"
+        stv:sRightIconHeight="40dp"
+        stv:sRightIconWidth="40dp"
+        stv:sRightTextString="所在地"
+        stv:sRightIconMarginRight="@dimen/size_20"/>
+    <com.allen.library.SuperTextView
+        android:id="@+id/st_sign"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        stv:sLeftTextString="个性签名"
+        stv:sLeftViewMarginLeft="@dimen/size_20"
+        stv:sLeftViewGravity="left_center"
+        stv:sRightIconRes="@mipmap/forword"
+        stv:sRightIconHeight="40dp"
+        stv:sRightIconWidth="40dp"
+        stv:sRightTextString="请输入"
+        stv:sRightIconMarginRight="@dimen/size_20"/>
+
+</LinearLayout>

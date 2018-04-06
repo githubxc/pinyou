@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/avater_bkg" />
+
+        <ImageView
+            android:id="@+id/ci_avater"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/avater"/>
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ci_avater"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_10"
+            android:textSize="15sp"
+            android:text="用户名"
+            android:textColor="@color/app_white"/>
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="0"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_below="@id/tv_user_name"
+            android:layout_centerHorizontal="true"
+            style="@style/mRatingBar"
+            android:stepSize="0.5"
+            android:isIndicator="true"/>
+    </RelativeLayout>
+
+    <com.maiml.library.BaseItemLayout
+        android:id="@+id/base_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text_size  = "18"
+        app:text_color = "@color/app_black"
+        app:icon_margin_left = "10"
+        app:icon_text_margin = "10"
+        app:margin_right = "10"
+        app:item_height = "50"
+        app:line_color = "@color/line">
+
+    </com.maiml.library.BaseItemLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:layout_marginBottom="@dimen/size_20"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_exit_login"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_10"
+            android:background="@drawable/bt_shape"
+            android:text="退出登录"
+            android:textColor="@color/app_white"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

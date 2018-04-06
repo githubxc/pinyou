@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:background="@drawable/shape_corners">
+
+        <RelativeLayout
+            android:id="@+id/rl_home1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.xc.pinyou.view.CircleImageView
+                android:id="@+id/carpool_info_user_avater"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/size_10"
+                android:background="@mipmap/avater"/>
+
+            <TextView
+                android:id="@+id/carpool_info_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/carpool_info_user_avater"
+                android:text="用户名" />
+
+            <TextView
+                android:id="@+id/carpool_info_user_credibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/carpool_info_user_name"
+                android:text="信誉度" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_start_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_home1"
+            android:paddingTop="@dimen/size_10"
+            android:paddingBottom="@dimen/size_5">
+
+            <ImageView
+                android:id="@+id/iv_start_point"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/start_point"
+                android:layout_marginLeft="@dimen/size_10"/>
+
+            <TextView
+                android:id="@+id/info_tv_start_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_start_point"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:hint="从这里出发"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_end_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_below="@id/rl_start_point"
+            android:paddingBottom="@dimen/size_5">
+
+            <ImageView
+                android:id="@+id/iv_end_point"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/end_point"
+                android:layout_marginLeft="@dimen/size_10"/>
+
+            <TextView
+                android:id="@+id/info_tv_end_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_end_point"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:hint="到哪儿去"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_below="@id/rl_end_point"
+            android:paddingTop="@dimen/size_5"
+            android:paddingBottom="@dimen/size_5">
+
+            <ImageView
+                android:id="@+id/iv_start_time"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/start_time"
+                android:layout_marginLeft="@dimen/size_10"/>
+
+            <TextView
+                android:id="@+id/info_tv_start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_start_time"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:hint="出发时间"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_people"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_start_time"
+            android:paddingTop="@dimen/size_5"
+            android:paddingBottom="@dimen/size_5">
+
+            <ImageView
+                android:id="@+id/iv_people"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/people"
+                android:layout_marginLeft="@dimen/size_10"/>
+
+            <TextView
+                android:id="@+id/info_tv_people"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_people"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:hint="人数"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_sms_carpool"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_people"
+            android:paddingTop="@dimen/size_5"
+            android:paddingBottom="@dimen/size_5">
+
+            <ImageView
+                android:id="@+id/iv_message"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/cc_message"
+                android:layout_marginLeft="@dimen/size_10"/>
+
+            <ImageView
+                android:id="@+id/iv_carpool"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/car"
+                android:layout_marginRight="@dimen/size_10"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rl_sms_carpool"
+            android:background="@color/app_gray"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
